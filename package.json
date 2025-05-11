@@ -1,0 +1,15 @@
+{
+  "name": "telegram-music-bot",
+  "version": "1.0.0",
+  "description": "Un bot de Telegram para buscar y enviar canciones usando una API externa",
+  "main": "telegram_bot.js",
+  "scripts": {
+    "start": "node telegram_bot.js"
+  },
+  "author": "Tu Nombre",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "*",
+    "node-telegram-bot-api": "*"
+  }
+}
