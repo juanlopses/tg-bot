@@ -29,8 +29,14 @@ async function handleMedia(msg) {
     const file = await bot.getFile(fileId);
     const fileUrl = `https://api.telegram.org/file/bot${token}/${file.file_path}`;
 
+    // Ruta del archivo y crear la carpeta 'downloads' si no existe
+    const downloadsDir = path.join(__dirname, 'downloads');
+    if (!fs.existsSync(downloadsDir)) {
+      fs.mkdirSync(downloadsDir);  // Crear la carpeta 'downloads' si no existe
+    }
+    const filePath = path.join(downloadsDir, file.file_path.split('/').pop());
+
     // Descargar el archivo
-    const filePath = path.join(__dirname, 'downloads', file.file_path.split('/').pop());
     await downloadFile(fileUrl, filePath);
 
     // Reenviar el archivo de vuelta al chat
