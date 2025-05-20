@@ -1,15 +1,19 @@
 {
-  "name": "telegram-music-bot",
+  "name": "telegram-bot",
   "version": "1.0.0",
-  "description": "Un bot de Telegram para buscar y enviar canciones usando una API externa",
-  "main": "telegram_bot.js",
+  "description": "Telegram bot to handle photos and videos and upload them to tmpfiles.org",
+  "main": "index.js",
   "scripts": {
-    "start": "node telegram_bot.js"
+    "start": "node index.js"
   },
-  "author": "Tu Nombre",
-  "license": "ISC",
   "dependencies": {
     "axios": "*",
+    "form-data": "*",
     "node-telegram-bot-api": "*"
-  }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "",
+  "license": "ISC"
 }
